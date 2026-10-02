@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="本機 CAE 開算前檢查清單。Sagging 與 Shock 以不同顏色區分，自動儲存於此瀏覽器。">
+  <title>CAE Pre-Run Checklist</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23002fa7'/%3E%3Cpath d='m8 16 5 5 11-11' stroke='white' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="app-header">
+    <a class="brand" href="#main"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><span>CAE <span class="brand-light">Pre-Run Checklist</span></span></a>
+    <span class="local-status" id="save-status">本機儲存</span>
+  </header>
+  <div id="storage-error" role="alert" hidden></div>
+  <main id="main" tabindex="-1"></main>
+  <footer class="app-footer"><span>CAE Pre-Run Checklist</span><span>資料僅儲存於此瀏覽器 · 修改自動儲存</span></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="editor" aria-labelledby="dialog-title"><form id="editor-form"><div class="dialog-heading"><h2 id="dialog-title"></h2><button type="button" class="icon-button" id="close-dialog" aria-label="關閉"></button></div><div id="dialog-fields"></div><p id="form-error" role="alert" hidden></p><div class="dialog-footer"><button type="button" id="cancel-dialog" class="button">Cancel</button><button type="submit" id="submit-dialog" class="button primary">Save</button></div></form></dialog>
+</body>
+</html>

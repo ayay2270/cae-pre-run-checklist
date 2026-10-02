@@ -1,0 +1,13 @@
+{
+  "name": "cae-pre-run-checklist",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Direct, local CAE pre-run checklist with color-coded sections",
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test model.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
